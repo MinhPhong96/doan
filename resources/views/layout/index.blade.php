@@ -7,7 +7,7 @@
         ============================================ --> 
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>AdinoPhone | @yield('title')</title>
+        <title>ClickBuy | @yield('title')</title>
         <meta name="description" content="">
         <base href="{{asset('')}}">
 		<!-- Mobile specific metas --> 

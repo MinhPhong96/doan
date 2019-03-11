@@ -3,7 +3,7 @@
 <!-- Page Content -->
 <div id="page-wrapper">
 	<div class="container-fluid">
-		<h1>WELCOME TO ADINO PHONE</h1>
+		<h1>WELCOME TO CLICK BUY</h1>
 		@if(count($errors)> 0)
 		<div class="alert alert-danger">
 			@foreach($errors->all() as $err)

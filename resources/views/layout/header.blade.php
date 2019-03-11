@@ -18,7 +18,7 @@
 						<!--Start Logo area -->
 						<div class="logo"> 
 							<a href="page/home">
-								<img src="pages_assets/img/logo/logo.png" alt="" />
+								<img src="pages_assets/img/logo/logo-clickbuy.png" alt="" />
 							</a>
 						</div> 
 						<!--End Logo area -->

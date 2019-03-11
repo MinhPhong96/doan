@@ -25,11 +25,11 @@ class groupproductController extends Controller
 			$current = dGroupProduct::find($id);
 			$current->delete();
 			return redirect('admin/groupproduct/list');
+			}
 			catch(\Illuminate\Database\QueryException $err)
 			{
 				return redirect('admin/groupproduct/list')->with('Thongbao','You have to delete table son');
 			}
-		}
 	}
 	public function postAdd(Request $request){
 		$this->validate($request,

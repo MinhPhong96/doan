@@ -20,7 +20,7 @@ class homeController extends Controller
     	// $product =dProduct::take(12)->get()->toArray();
     	// $product =array_chunk($product,4,true);
     	$product =dProduct::take(12)->get();
-    	$blog =dNews::all();
+    	$blog =dNews::take(4)->get();
     	$index =0;
     	return view('pages.home',['slide'=>$slide,'product'=>$product,'index'=>$index,'blog'=>$blog]);
     }
