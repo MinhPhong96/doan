@@ -24,6 +24,9 @@ Route::group(['prefix' => 'admin','middleware'=>'adminlogin'], function() {
 		Route::post('add','slideController@postAdd');
 		Route::get('delete/{id}','slideController@getDelete');
 	});
+	Route::group(['prefix' => 'category' , 'namespace' => 'category'], function() {
+		Route::get('list', ['as' => 'category', 'uses' => 'categoryController@getList']);
+	});
 	Route::group(['prefix' => 'brand'], function() {
 		Route::get('list','brandController@getList');
 		Route::get('edit/{id}','brandController@getEdit');

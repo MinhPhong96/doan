@@ -6,7 +6,7 @@
 						<form action="page/search" name="myForm" method="POST">
 							{!! csrf_field() !!}
 							<div class="search_box">
-								<input name="Name" id="itp" class="input_text" type="text" value="Search"/>
+								<input name="Name" id="itp" class="input_text" type="text" value="Tìm kiếm"/>
 								<button type="submit" class="btn-search">
 									<span><i class="fa fa-search"></i></span>
 								</button>
@@ -61,7 +61,7 @@
 												@endforeach
 												@endif
 												<div class="cart_shoptings">
-													<a href="page/wishlist">My Wishlist</a>
+													<a href="page/wishlist">Yêu Thích</a>
 												</div>
 											</div>
 										</li>
@@ -81,7 +81,7 @@
 								<!--Start desktop menu area -->
 								<div class="main_menu">
 									<ul id="nav_menu" class="active_cl">
-										<li><a href="page/home"><span class="Home">Home</span></a>
+										<li><a href="page/home"><span class="Home">Trang Chủ</span></a>
 										</li>
 										@foreach($menu as $value)
 										<li><a href="page/category/{{$value->id}}"><span class="Clothings">{{$value->name}}</span></a>
@@ -94,12 +94,12 @@
 											</div>
 										</li>
 										@endforeach
-										<li><a href="page/home"><span class="Accessaries">Pages</span></a>
+										<li><a href="page/home"><span class="Accessaries">Trang Khác</span></a>
 											<div class="home_mega_menu">
-												<a href="{{route('contact')}}">Contact</a>
+												<a href="{{route('contact')}}">Liên Hệ</a>
 												<a href="{{route('cateblog')}}">Blog</a>
 												<a href="{{route('user')}}">My Account</a>
-												<a href="{{route('wishlist')}}">Wishlist</a>
+												<a href="{{route('wishlist')}}">Yêu Thích</a>
 											</div>
 										</li>
 									</ul>

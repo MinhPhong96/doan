@@ -27,6 +27,9 @@
                 				</ul>
                 				<!-- /.nav-second-level -->
                 			</li>
+                      <li>
+                				<a href="admin/category/list"><i class="fa fa-university adn_01"></i>Danh mục</a>
+                			</li>
                 			<li>
                 				<a href="#"><i class="fa fa-cube fa-fw"></i> Product<span class="fa arrow"></span></a>
                 				<ul class="nav nav-second-level">

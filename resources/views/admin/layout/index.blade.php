@@ -16,7 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="admin_assets/dist/css/sb-admin-2.css" rel="stylesheet">
-
+    <link href="css/main.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="admin_assets/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
