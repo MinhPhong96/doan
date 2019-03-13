@@ -11,6 +11,7 @@
         <meta name="description" content="">
         <base href="{{asset('')}}">
 		<!-- Mobile specific metas --> 
+		<meta property="fb:app_id" content="612397255892437" >
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- FONTS -->
 		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600italic,300italic,700' rel='stylesheet' type='text/css'>
@@ -59,6 +60,8 @@
 		@include('layout.footer')
 		<!--End Footer area -->
 		<!-- jquery JS -->
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=612397255892437&autoLogAppEvents=1"></script>	
         <script src="pages_assets/js/vendor/jquery-1.11.3.min.js"></script>
 		<!-- bootstrap JS -->
         <script src="pages_assets/js/bootstrap.min.js"></script>

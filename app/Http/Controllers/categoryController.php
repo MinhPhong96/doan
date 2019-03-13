@@ -9,7 +9,7 @@ use App\dGroupProduct;
 class categoryController extends Controller
 {
     public function getList(){
-    	$brand =dBrand::all();
-    	return view('admin.category.list',['brand'=>$brand]);
+        
+    	return view('admin.category.list');
     }
 }

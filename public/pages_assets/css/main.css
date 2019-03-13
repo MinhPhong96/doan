@@ -45,5 +45,10 @@ h3{orphans:3;widows:3;}
 h2,
 h3{page-break-after:avoid;}
 }
+.adn_02 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .slicknav_menu{display:none}
 .avatar{width: 50px; height: 50px ;border-radius: 50%;}

@@ -248,7 +248,7 @@
 							</div>
 						</div>
 						<div id="tab-3" class="tab-pane fade">
-							<div class="product_description">
+							<!-- <div class="product_description">
 								<ul class="comments">
 									@foreach($product->comment as $cm)
 									<li>
@@ -271,6 +271,9 @@
 
 									@endif
 								</ul>
+							</div> -->
+							<div class="adn_02">
+								<div class="fb-comments" data-href="http://localhost/phone/public/page/home" data-numposts="5"></div>
 							</div>
 						</div>
 					</div>
