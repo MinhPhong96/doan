@@ -1,6 +1,8 @@
-@extends('admin.layout.index')
+@extends('layout.index')
+@section('title','OrderHistory')
 @section('content')
 <!-- Page Content -->
+<div class="container">
 <div id="page-wrapper">
 	<div class="container-fluid">
 		<div class="row">
@@ -10,8 +12,8 @@
 				</h1>
 			</div>
 			<div class="container">     
-				<div class="row">
 					<div class="col-sm-6">
+						<a href="admin/export/{{$order->id}}">export pdf</a>
 						<ul class="list-group">
 							<li class="list-group-item">Full Name : {{$user->fullname}}</li>
 							<li class="list-group-item">Emai : {{$user->email}}</li>
@@ -26,24 +28,12 @@
 				</div>
 			</div>
 			<div class="container">
-				<form action="admin/order/edit/{{$order->id}}" method="POST">
-					<input type="hidden" name="_token" value="{{csrf_token()}}">
-					<div class="col-sm-6">
-						<ul class="list-group">
-							<li class="list-group-item">Status 
-								<select class="form-control" name="select" >
-									<option @if($order->payment == "Đã Thanh toán") {{"selected"}} @endif value="Đã Thanh toán">Đã Thanh toán</option>
-									<option @if($order->payment == "đang xử lý") {{"selected"}} @endif value="đang xử lý">đang xử lý</option>
-									<option @if($order->payment == "xuất kho") {{"selected"}} @endif value="xuất kho">xuất kho</option>
-									<option @if($order->payment == "Đang vận CHuyển") {{"selected"}} @endif value="Đang vận CHuyển">Đang vận CHuyển</option>
-									<option @if($order->payment == "đã hủy") {{"selected"}} @endif value="đã hủy">đã hủy</option>
-								</select>
-
-							</li>
-							<li class="list-group-item">Date Time : {{$order->created_at}} <button type="submit" class="btn btn-default">Lưu</button></li>
-						</ul>
-					</div>
-				</form>
+				<div class="col-sm-6">
+					<ul class="list-group">
+						<li class="list-group-item">Status : {{$order->payment}}</li>
+						<li class="list-group-item">Date Time : {{$order->created_at}}</li>
+					</ul>
+				</div>
 			</div>
 			<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 				<thead>
@@ -67,7 +57,10 @@
 					@endforeach
 				</tbody>
 				<tr align="center">
-					<td colspan="4">Sub Total</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>Sub Total</td>
 					<td>{{$total[0]}}</td>
 				</tr>
 			</table>
@@ -75,6 +68,7 @@
 		<!-- /.row -->
 	</div>
 	<!-- /.container-fluid -->
+</div>
 </div>
 <!-- /#page-wrapper -->
 @endsection

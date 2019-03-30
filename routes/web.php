@@ -124,6 +124,8 @@ Route::post('page/login','homeController@postLogin');
 Route::get('page/logout','homeController@getlogout');
 Route::post('comment/{id}','commentController@postcmt');
 Route::get('page/register','homeController@getRegister');
+Route::get('page/profile','homeController@getProfile');
+Route::get('page/profileDeital/{id}','homeController@getProfileDetail');
 Route::post('page/register','homeController@postRegister');
 //search
 Route::post('page/search','homeController@postSearch');

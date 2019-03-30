@@ -9,8 +9,11 @@ use App\dNews;
 use App\dBrand;
 use App\dImage;
 use App\dGroupProduct;
+use App\dOrderItem;
 use App\User;
 use App\Cart;
+use App\dOrders;
+
 use Session;
 class homeController extends Controller
 {
@@ -37,6 +40,25 @@ class homeController extends Controller
         $brand =dBrand::where('id',$gp->id_brand)->get()->first();
         $index =1;
         return view('pages.detail',['product'=>$product,'index'=>$index,'brand'=>$brand]);
+    }
+    public function getProfile() {
+        if(Auth::check()){
+            $list =dOrders::orderBy('id','DESC')->where('id_user', Auth::user()->id)->get();
+            return view('pages.profile',['list'=>$list]);
+        }else{
+            return redirect('page/home');
+        }
+    }
+    public function getProfileDetail($id) {
+        if(Auth::check()){
+            $order =dOrders::find($id);
+            $total =dOrderItem::selectRaw('SUM(qty*price) as total')->where('id_orders', $id)->groupBy('id_orders')->pluck('total');
+            $index =1;
+            $user =User::find($order->id_user);
+            return view('pages.profiledetail',['order'=>$order,'index'=>$index,'user'=>$user,'total'=>$total]);
+        }else{
+            return redirect('page/home');
+        }
     }
     public function getLogin()
     {
